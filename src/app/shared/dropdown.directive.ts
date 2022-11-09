@@ -5,7 +5,7 @@ import { Directive, ElementRef, Renderer2, OnInit ,HostListener, HostBinding } f
 })
 export class DropdownDirective {
     @HostBinding("class.open") isOpen = false;
-    constructor(private element: ElementRef, private renderer: Renderer2){
+    constructor(private element: ElementRef){
     }
 
     @HostListener('document:click', ['$event']) toggleOpen(event: Event) {

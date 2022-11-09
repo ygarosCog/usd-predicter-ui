@@ -1,0 +1,35 @@
+/* .background-dollar{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/US_one_dollar_bill%2C_reverse%2C_series_2009.jpg/800px-US_one_dollar_bill%2C_reverse%2C_series_2009.jpg");
+    background-color: rgba(227, 230, 199, 1);
+    height: 100%;
+    opacity: 0.3;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -9999;
+    position: relative;
+    transform: translate(-7.97165px, -2.71259px);
+} */
+
+
+
+
+.bg {
+    position: fixed; 
+    top: -50%; 
+    left: -50%; 
+    width: 200%; 
+    height: 200%;
+    z-index: -9999;
+  }
+  .bg img {
+    position: absolute; 
+    opacity: 0.3;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    margin: auto; 
+    min-width: 50%;
+    min-height: 50%;
+  }

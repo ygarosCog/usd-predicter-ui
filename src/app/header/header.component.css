@@ -1,0 +1,40 @@
+.opacity{
+    opacity: 0.6;
+}
+a{
+    color: black !important;
+    font-weight: bolder;
+}
+a:hover{
+    color: brown !important;
+}
+
+
+/* https://code-boxx.com/html-css-news-ticker-horizontal-vertical/ */
+
+/* (A) FIXED WRAPPER */
+.hwrap {
+    overflow: hidden; /* HIDE SCROLL BAR */
+    width: 300%;
+    transform: translate(-75%);
+}
+   
+  /* (B) MOVING TICKER WRAPPER */
+  .hmove { display: flex; }
+  
+  /* (C) ITEMS - INTO A LONG HORIZONTAL ROW */
+  .hitem {
+    /* flex-shrink: 0; */
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+   
+  /* (D) ANIMATION - MOVE ITEMS FROM RIGHT TO LEFT */
+  /* 4 ITEMS -400%, CHANGE THIS IF YOU ADD/REMOVE ITEMS */
+  @keyframes tickerh {
+    0% { transform: translate3d(100%, 0, 0); }
+    100% { transform: translate3d(-100%, 0, 0); }
+  }
+  .hmove { animation: tickerh linear 10s infinite; }
+  .hmove:hover { animation-play-state: paused; }

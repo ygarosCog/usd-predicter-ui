@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <button (click)="onPredict()" style="margin-right: 15px;" class="btn btn-secondary" type="button">Predict for tomorrow</button>
+                        <button (click)="onDate()" class="btn btn-success" type="button">Check exchange rate for date</button>
+                    </div>
+                </div>
+                <br>
+                <div class="row" *ngIf="forDateMode">
+                    <div class="col-xs-6">
+                        <input ngModel required type="date" name="date" id="date" class="form-control">
+                    </div>
+                    <div class="col-xs-6">
+                        <button [disabled]="f.invalid" class="btn btn-success" type="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <div *ngIf="error" class="alert alert-danger">
+                <p style="text-align: center;">{{ error }}</p>
+            </div> 
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div *ngIf="prediction" class="alert alert-success">
+                <h1 style="text-align: center;">{{ prediction }}</h1>
+            </div>
+        </div>
+    </div>
+</div>
